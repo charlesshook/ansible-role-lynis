@@ -6,6 +6,10 @@ on:
     branches:
       - main
       
+defaults:
+  run:
+    working-directory: 'charlesshook.lynis'
+    
 jobs:
   release:
     name: Release
@@ -14,7 +18,7 @@ jobs:
       - name: Check out the codebase.
         uses: actions/checkout@v4
         with:
-          path: 'geerlingguy.redis'
+          path: 'geerlingguy.lynis'
 
       - name: Set up Python 3.
         uses: actions/setup-python@v5
