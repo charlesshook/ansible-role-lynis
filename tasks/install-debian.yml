@@ -1,0 +1,4 @@
+---
+- name: "Ensure Lynis is installed"
+  ansible.builtin.apt:
+    name: "{{ lynis_package }}"
